@@ -11,6 +11,29 @@ Borrowed books directory (hooked up to the backend)
 Checkout a book (mocked)
 Currently there is no user management or login, it's all guest.
 
+With more time I would:
+Implement the remaining features
+
+- Author's biography
+- List of bookworms
+- Mark books as returned
+- Set how long books are checked out for
+- Account creation
+
+Role based permissions, backend returns a role for a user and the frontend could use some kind of hook to access the current role and check if it should hide/show content.
+
+Don't fetch up front all books, borrowed books, only the first page and then fetch the subsequent page when going to the next page.
+
+Tests
+Frontend
+
+- React testing library to test events and visual behaviour
+
+Backend
+
+- Unit tests
+- Integration tests
+
 ## Run the server
 
 (Apologies for not being containerized, I didn't have time)
@@ -26,8 +49,3 @@ Currently there is no user management or login, it's all guest.
 1. cd client
 2. npm install
 3. npm start
-
-## To login as the default librarian
-
-Email: echohunt@gmail.com
-Password: 123
