@@ -26,8 +26,3 @@ Currently there is no user management or login, it's all guest.
 1. cd client
 2. npm install
 3. npm start
-
-## To login as the default librarian
-
-Email: echohunt@gmail.com
-Password: 123
