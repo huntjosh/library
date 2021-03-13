@@ -1,0 +1,53 @@
+import mongoose, { Document, Model } from 'mongoose';
+
+export interface IBook extends Document {
+    title: string,
+    author: string,
+    author_id: number,
+    author_bio: string,
+    authors: string,
+    title_slug: string,
+    isbn13: number,
+    isbn10: string,
+    price: string,
+    format: string,
+    publisher: string,
+    pubdate: string,
+    edition: string,
+    subjects: string,
+    lexile: string,
+    pages: number,
+    dimensions: string,
+    overview: string,
+    excerpt: string,
+    synopsis: string,
+    toc: string,
+    editorial_reviews: string,
+}
+
+const bookSchema = new mongoose.Schema({
+    title: String,
+    author: String,
+    author_id: Number,
+    author_bio: String,
+    authors: String,
+    title_slug: String,
+    isbn13: Number,
+    isbn10: String,
+    price: String,
+    format: String,
+    publisher: String,
+    pubdate: String,
+    edition: String,
+    subjects: String,
+    lexile: String,
+    pages: Number,
+    dimensions: String,
+    overview: String,
+    excerpt: String,
+    synopsis: String,
+    toc: String,
+    editorial_reviews: String,
+});
+
+export const Book: Model<IBook> = mongoose.model("Book", bookSchema);
